@@ -294,7 +294,8 @@ section {
   padding: 0;
   margin: 0; }
   .portfolio_item img {
-    width: 100%; }
+    width: 100%;
+    height: 180px; }
   .portfolio_item:hover .portfolio_item_info {
     opacity: 1;
     padding-top: 20%; }
