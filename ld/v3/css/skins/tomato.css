@@ -1,0 +1,138 @@
+body {
+  background-color: #1C1C1C;
+  color: #222; }
+
+body button:focus,
+body input:focus,
+body textarea:focus {
+  outline-color: #f5791b; }
+
+a {
+  color: #f5791b; }
+
+p {
+  color: #888; }
+
+.color_element {
+  color: #f5791b; }
+
+.color_bg {
+  background-color: #f5791b; }
+
+.color_border {
+  border-color: #f5791b; }
+
+.bg_light {
+  background-color: #FAFAFA; }
+
+.bg_dark {
+  background-color: #222;
+  color: #FAFAFA; }
+  .bg_dark .s_descr::after {
+    background-color: #FAFAFA; }
+
+#top_bar {
+  background-color: #222;
+  color: #FAFAFA; }
+  #top_bar h1 {
+    letter-spacing: 1px; }
+  #top_bar p {
+    letter-spacing: 2px; }
+
+.triangle-menu {
+  border-top: 150px solid #f5791b; }
+  .triangle-menu.open {
+    border-top-color: #222; }
+
+.triangle-menu-list ul li a {
+  color: #888; }
+  .triangle-menu-list ul li a:hover {
+    color: #f5791b; }
+  .triangle-menu-list ul li a.active {
+    color: #f5791b; }
+
+.toggle_menu {
+  background-color: #222; }
+
+.sw-topper,
+.sw-bottom,
+.sw-footer {
+  background: #FAFAFA; }
+
+.top_menu a:hover {
+  color: #f5791b;
+  background-color: rgba(255, 255, 255, 0.05); }
+.top_menu a {
+  letter-spacing: 4px; }
+
+.top_text h1,
+.top_text p {
+  color: #FAFAFA; }
+.top_text h1 {
+  letter-spacing: 1px; }
+.top_text p {
+  letter-spacing: 4px; }
+
+.s_descr {
+  letter-spacing: 5px; }
+  .s_descr::after {
+    background-color: #222; }
+
+section h3 {
+  color: #888;
+  letter-spacing: 3px; }
+
+.s_about p:nth-child(even) {
+  color: #f5791b; }
+
+.main_footer {
+  color: #888; }
+
+.resume_container {
+  color: #888; }
+  .resume_container h3 {
+    color: #222;
+    letter-spacing: 2px;
+    font-size: 16px; }
+
+.resume_item .year {
+  background-color: #f5791b; }
+.resume_item .resume_descr {
+  color: #222; }
+
+.s_portfolio .filter_list li {
+  letter-spacing: 2px; }
+.s_portfolio .filter_list li.active {
+  border-color: #f5791b; }
+.s_portfolio h3 {
+  letter-spacing: 2px; }
+
+.portfolio_item .portfolio_item_info a {
+  border-color: #f5791b;
+  color: #f5791b; }
+
+.cont_list p {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.s_callback button {
+  background-color: #222;
+  letter-spacing: 2px; }
+  .s_callback button:hover {
+    background-color: #f5791b; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888; }
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888; }
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888; }
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #888; }
+
+.text-danger {
+  color: red; }
