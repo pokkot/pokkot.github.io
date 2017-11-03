@@ -1,0 +1,690 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #fff
+body input:required:valid,
+body textarea:required:valid
+	color: #fff
+
+.hidden
+	display: none
+
+body
+	overflow-x: hidden
+
+section,
+.main_head
+	position: relative
+
+.main_head
+	min-height: 480px
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+
+//.logo_container
+//	padding-top: 30px
+
+//svg
+//	position: relative
+//	width: 50px
+//	height: 50px
+//	float: left
+//	z-index: 1
+
+
+//top bar
+#top_bar
+	position: fixed
+	z-index: 100
+	display: block
+	top: 0
+	left: 0
+	width: 100%
+	padding: 15px
+	overflow: hidden
+	-webkit-box-shadow: 0 0 3px 0 #000
+	-moz-box-shadow: 0 0 3px 0 #000
+	-ms-box-shadow: 0 0 3px 0 #000
+	-o-box-shadow: 0 0 3px 0 #000
+	+transition(500ms all ease-in-out)
+	.logo
+		float: left
+		margin-left: 15px
+		text-align: center
+		h1
+			padding: 5px
+			margin: 0
+			font-size: 1.4em
+			text-transform: uppercase
+		p
+			font-size: .6em
+			margin: 0
+			text-transform: uppercase
+
+.bar-hidden
+	+transform(translateY(-100%))
+	opacity: 0
+	position: fixed
+	margin-top: 0
+	top: 0!important
+
+
+
+.toggle_menu
+	position: fixed
+	height: 50px
+	width: 50px
+	float: right
+	top: 15px
+	right: 15px
+	z-index: 200
+	border: none
+	span
+		display: block
+
+$w: 28px
+$h: 3px	
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	border: none
+	border-radius: 4px 4px 4px 4px
+	+transition(top 0.2s)
+	+transform(all 0.5s)
+	display: block
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all .2s ease
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	border: none
+	border-radius: 4px 4px 4px 4px
+	+transition(top 0.2s)
+	+transform(all 0.5s)
+	//transition-delay: 0.2s, 0s
+
+.sandwich.active
+	.sw-topper
+		top: 9px
+		+transform(rotate(-45deg))
+	.sw-bottom
+		opacity: 0
+		//transform: rotate(-180deg) 
+	.sw-footer
+		top: 3px
+		+transform(rotate(45deg))
+
+.top_menu
+	z-index: 100
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	top: 0
+	left: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		position: absolute
+		width: 100%
+		top: 50%
+		+transform(translateY(-50%))
+		text-align: center
+		+animation-duration(.01s)
+		li
+			&:nth-child(1) a
+				+animation-delay(0)
+			&:nth-child(2) a
+				+animation-delay(.1s)
+			&:nth-child(3) a
+				+animation-delay(.2s)
+			&:nth-child(4) a
+				+animation-delay(.3s)
+		a
+			+transition(all .5s ease)
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 12px
+			position: relative
+			line-height: 60px
+			outline: none
+
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	.top_descr
+		display: table-row
+		.top_centered
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+	.top_text
+		+transition(all 1s ease)
+		position: relative
+		display: inline-block
+		h1
+			padding: 0
+			margin-left: 10px
+			margin-right: 10px
+			display: inline-block
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 3em
+			margin: 0
+			+animation-delay(.5s)
+		p
+			text-transform: uppercase
+			font-size: 1.2em
+			margin: 0
+			+animation-delay(1s)
+		.social_wrap
+			margin-top: 60px
+			font-size: 1.4em
+			ul,
+			li
+				list-style-type: none
+				padding: 0
+				margin: 0
+			ul
+				li
+					+animation-duration(.75s)
+					+animation-delay(1.5s)
+					display: inline-block
+					padding: 0 4px
+				a
+					+transition(all .2s ease)
+					opacity: 0.7
+					&:hover
+						opacity: 1
+					.fa-square
+						color: rgba(0,0,0,.5)
+
+.person
+	text-align: center
+	margin-bottom: 35px
+	img
+		max-width: 220px
+		display: inline-block
+		border-radius: 50%
+
+.low_opacity
+	opacity: .3
+
+section
+	padding: 70px 0 90px
+	.section_header
+		+animation-delay(0)
+	h2,
+	h3
+		text-align: center
+		text-transform: uppercase
+	h2
+		font-size: 2em
+		margin: 0 0 15px
+	h3
+		font-size: .85em
+		font-weight: 400
+		margin: 0 0 35px
+
+.s_descr_wrap
+	text-align: center
+	.s_descr
+		display: inline-block
+		text-transform: uppercase
+		margin-bottom: 110px
+		font-size: 1em
+		&::after
+			content: ""
+			width: 150px
+			height: 1px
+			position: absolute
+			left: 50%
+			margin-top: 60px
+			margin-left: -75px
+
+
+.main_footer
+	padding: 40px 0
+	font-size: 1em
+
+
+.s_portfolio
+	.filter_list
+		text-align: center
+		margin-bottom: 35px
+		ul,
+		li
+			padding: 0
+			margin: 0 15px
+			list-style-type: none
+			display: inline-block
+			text-transform: uppercase
+			cursor: pointer
+		li.active
+			border-bottom: 1px solid 
+
+.portfolio_item
+	display: none
+	padding: 0
+	margin: 0
+	.portfolio_photo
+		top: 0
+		left: 0
+		display: block
+		height: 200px
+		width: 100%
+		background-size: cover
+		background-position: center
+	&:hover .portfolio_item_info
+		opacity: 1
+		padding-top: 20%
+
+.portfolio_item_info
+	text-align: center
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.8)
+	padding-top: 15%
+	opacity: 0
+	transition: all .5s
+	h3
+		color: #fff
+		margin-bottom: 0
+		font-weight: 600
+	a
+		background-color: transparent
+		border: 1px solid
+		padding: 2px 10px
+		display: inline-block
+
+.portfolio_item
+	.hidden
+		+transition(all 3s ease)
+
+.portfolio_popup_content
+	max-width: 550px
+	margin: auto
+	text-align: center
+	-webkit-box-shadow: 0 3px 25px 0 #000
+	-moz-box-shadow: 0 3px 25px 0 #000
+	-ms-box-shadow: 0 3px 25px 0 #000
+	-o-box-shadow: 0 3px 25px 0 #000
+	img
+		width: 100%
+	h3
+		padding: 0 30px 25px
+		margin: 0
+		font-size: 1.4em
+		text-transform: uppercase
+	p
+		margin: 0
+		padding: 30px
+		text-align: justify
+	a
+		background-color: transparent
+		border: 1px solid
+		padding: 2px 10px
+		display: inline-block
+
+.modal-box-content
+	padding: 30px 0
+	position: relative
+.mfp-container
+	padding-top: 6px
+	padding-bottom: 6px
+
+.contacts_container
+	.cont_photo
+		text-align: right
+		img
+			border-radius: 50%
+			height: 210px
+			width: 210px
+
+	.cont_list
+		text-align: left
+		margin: 12px 0 35px 20px
+		h2
+			text-align: left
+			margin-bottom: 4px
+		p
+			margin: 0
+		li.location
+			font-style: italic
+		ul,
+		li
+			padding: 0
+			margin: 0
+			list-style-type: none
+			padding-bottom: 1px
+		.social_wrap
+			margin-top: 15px
+			margin-bottom: 10px
+			font-size: 1em
+			ul,
+			li
+				list-style-type: none
+				padding: 0
+				margin: 0
+			ul
+				li
+					+animation-duration(.75s)
+					+animation-delay(0.5s)
+					display: inline-block
+					padding-right: 4px
+				a
+					+transition(all .2s ease)
+					opacity: 0.8
+					&:hover
+						opacity: 1
+					.fa-square
+						color: rgba(0,0,0,.5)
+
+html
+	.no_color
+		background: transparent
+		z-index: 10
+
+.main_form
+	margin: 0 20%
+	button
+		+transition(all 1s ease)
+		border: none
+		color: #fff
+		line-height: 40px
+		padding: 0 25px
+		font-size: 13px
+		text-transform: uppercase
+		font-weight: 600
+		margin-top: 10px
+		float: right
+.form-group
+	display: block
+	margin-bottom: 20px
+	.color_element
+		font-weight: 700
+		font-size: 18px
+	.text-danger
+		font-size: 11px
+		margin-top: 5px
+		display: block
+		ul,
+		li
+			margin: 0
+			padding: 0
+			list-style-type: none
+	input,
+	textarea
+		color: #fff
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		margin-top: 5px
+		line-height: 40px
+		text-indent: 12px
+		font-size: 12px
+		background-color: transparent
+
+
+
+
+
+
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg 
+	opacity: 0
+
+	-webkit-transition: all 0.35s ease
+	-moz-transition: all 0.35s ease
+	transition: all 0.35s ease
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+
+	-webkit-transition: all 0.25s ease
+	-moz-transition: all 0.25s ease
+	transition: all 0.25s ease
+
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0
+
+
+
+
+
+
+
+
+
+
+
+
+$height-span: 5px
+$width-span: 35px
+$shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+$shadow-active: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+
+.sandwich-icon
+	top: 0
+	right: 0
+	position: fixed
+	width: 40px
+	height: 40px
+	margin: 20px 20px
+	cursor: pointer
+	z-index: 1010
+
+	//icon design
+	& span
+		display: block
+		margin: 0 auto 5px auto
+		width: $width-span
+		height: $height-span
+		background-color: #444
+		transition: all .35s
+		box-shadow: $shadow
+
+	//clicked button
+	&.active
+		.top
+			+transform(translateY(10px) translateX(0) rotate(45deg))
+			background: #f5f5f5
+		.middle
+			opacity: 0
+			+transform(translateX(50px))
+		.bottom
+			+transform(translateY(-10px) translateX(0) rotate(-45deg))
+			background: #f5f5f5
+
+	//hover clicked button and normal
+	&.active:hover, &:hover
+		.top, .middle, .bottom
+			box-shadow: $shadow-active
+
+
+//triangle-expanded-menu
+.triangle-menu
+	top: 0
+	right: 0
+	width: 0
+	height: 0
+	z-index: 1000
+	position: fixed
+	//border-top: 150px solid #FF5252
+	border-left: 150px solid transparent
+	-webkit-transition: all 500ms 150ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	-moz-transition: all 500ms 150ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	-o-transition: all 500ms 150ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	transition: all 500ms 150ms cubic-bezier(0.235, 0.005, 0.44, 1)
+
+	&.open
+		//border-top-color: #333
+		border-top-width: calc(100vh*2)
+		border-left-width: calc(100vw*2)
+
+//menu-list
+.triangle-menu-list
+	position: fixed
+	top: 100px
+	left: 0
+	width: 100%
+	height: calc(100% - 200px)
+	z-index: 1010
+	visibility: hidden
+	-webkit-transition: all 300ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	-moz-transition: all 300ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	-o-transition: all 300ms cubic-bezier(0.235, 0.005, 0.44, 1)
+	transition: all 300ms cubic-bezier(0.235, 0.005, 0.44, 1)
+
+	& ul
+		list-style: none
+		padding: 0
+		margin: 0 auto
+		display: inline-block
+		position: relative
+
+		& li
+			opacity: 0
+			-webkit-transition: all 500ms cubic-bezier(0.235, 0.005, 0.44, 1)
+			-moz-transition: all 500ms cubic-bezier(0.235, 0.005, 0.44, 1)
+			-o-transition: all 500ms cubic-bezier(0.235, 0.005, 0.44, 1)
+			transition: all 500ms cubic-bezier(0.235, 0.005, 0.44, 1)
+
+			& a
+				z-index: 1012
+				cursor: pointer
+				text-transform: uppercase
+				text-decoration: none
+				//color: #777
+				-webkit-transition: all 250ms cubic-bezier(0.235, 0.005, 0.44, 1)
+				-moz-transition: all 250ms cubic-bezier(0.235, 0.005, 0.44, 1)
+				-o-transition: all 250ms cubic-bezier(0.235, 0.005, 0.44, 1)
+				transition: all 250ms cubic-bezier(0.235, 0.005, 0.44, 1)
+
+				//&:hover
+					//color: #f5f5f5
+				//	color: #FF5252
+
+				//&.active
+				//	color: #FF5252
+
+	&.open
+		visibility: visible
+		li
+			animation: fadeInRight .35s ease forwards
+			animation-delay: .35s
+			&:nth-of-type(2)
+				animation-delay: .45s
+			&:nth-of-type(3)
+				animation-delay: .55s
+			&:nth-of-type(4)
+				animation-delay: .55s
+			&:nth-of-type(5)
+				animation-delay: .65s
+
+//misc class
+.middle-align
+	display: -webkit-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+	-webkit-flex-direction: column
+	-ms-flex-direction: column
+	flex-direction: column
+	-webkit-box-pack: center
+	-webkit-justify-content: center
+	-ms-flex-pack: center
+	justify-content: center
+	-webkit-align-content: center
+	-ms-flex-line-pack: center
+	align-content: center

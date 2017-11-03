@@ -1,0 +1,178 @@
+@import "../bourbon/bourbon"
+
+$color: #f5791b //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #FAFAFA
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	background-color: #1C1C1C
+	color: $main_color
+
+body button:focus,
+body input:focus,
+body textarea:focus
+	outline-color: $color
+
+a
+	color: $color
+
+p
+	color: $text_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+
+.bg_light
+	background-color: $bg_light
+.bg_dark
+	background-color: $main_color
+	color: $bg_light
+	.s_descr::after
+		background-color: $bg_light
+
+//svg
+	//path
+		//fill: $bg_light
+
+
+#top_bar
+	background-color: $main_color
+	color: $bg_light
+	h1
+		+kerning(1)
+	p
+		+kerning(2)
+
+
+//triangle-menu
+.triangle-menu
+	border-top: 150px solid $color
+
+	&.open
+		border-top-color: $main_color
+
+.triangle-menu-list
+	& ul
+		& li
+			& a
+				color: $text_color
+				&:hover
+					color: $color
+				&.active
+					color: $color
+
+
+//sandwich
+.toggle_menu
+	background-color: $main_color
+	//border: 1px solid $text_color
+
+.sw-topper,
+.sw-bottom,
+.sw-footer
+	background: $bg_light
+
+.top_menu
+	a:hover
+		color: $color
+		background-color: rgba(255,255,255,.05)
+	a
+		+kerning(4)
+
+.top_text
+	h1,
+	p
+		color: $bg_light
+	h1
+		+kerning(1)
+	p
+		+kerning(4)
+
+.s_descr
+	+kerning(5)
+	&::after
+		background-color: $main_color
+
+section
+	h3
+		color: $text_color
+		+kerning(3)
+
+.s_about
+	p:nth-child(even)
+		color: $color
+
+
+.main_footer
+	color: $text_color
+
+.resume_container
+	color: $text_color
+	h3
+		color: $main_color
+		+kerning(2)
+		font-size: 16px
+
+.resume_item
+	.year
+		background-color: $color
+	.resume_descr
+		color: $main_color
+
+.s_portfolio
+	.filter_list
+		li
+			+kerning(2)
+		li.active
+			border-color: $color
+	h3
+		+kerning(2)
+
+.portfolio_item .portfolio_item_info,
+.portfolio_item .portfolio_popup_content .modal-box-content
+	a
+		border-color: $color
+		color: $color
+		&:focus
+			outline: none
+
+.modal-box-content
+	padding: 30px 0
+	position: relative
+	.mfp-close
+		font-size: 2.6em
+		height: 50px
+		width: 50px
+
+.portfolio_popup_content
+	h3
+		+kerning(1)
+
+
+.cont_list
+	p
+		text-transform: uppercase
+		+kerning(1)
+
+
+.s_callback
+	button
+		background-color: $main_color
+		+kerning(2)
+		&:hover
+			background-color: $color
+
+input,
+textarea
+	+placeholder()
+		color: $text_color
+.text-danger
+	color: red
